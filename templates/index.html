@@ -6,6 +6,11 @@
 {% block page_content %}
 <div class="page-header">
     <p>You'd like a meal for {{ meal }}</p>
+
+    <p>{% if dietary_restrictions %} You have {{ dietary_restrictions }} dietary restriction</p>
+      {% else %}
+      <p>You have no dietary restrictions. </p>
+      {% endif %}
 </div>
 {{ wtf.quick_form(form) }}
 {% endblock %}
