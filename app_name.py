@@ -6,13 +6,10 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'hard to guess string'
 
 bootstrap = Bootstrap(app)
-moment = Moment(app)
 
 class NameForm(FlaskForm):
     meal = StringField('What meal would you like to plan for?', validators=[DataRequired()])
@@ -30,7 +27,6 @@ def internal_server_error(e):
 def index():
     form = NameForm()
     if form.validate_on_submit():
-        meal = form.meal.data).first()
-        session['name'] = form.meal.data
+        session['meal'] = form.meal.data
         return redirect(url_for('index'))
     return render_template('index.html', form=form, meal=session.get('meal'))
