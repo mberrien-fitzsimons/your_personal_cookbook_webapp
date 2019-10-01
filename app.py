@@ -9,7 +9,8 @@ from models import *
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'hard to guess string'
+app.config['SECRET_KEY']='hard to guess string'
+app.config['ENV']='HEROKU_BUILDPACK_GIT_LFS_REPO'
 
 bootstrap = Bootstrap(app)
 

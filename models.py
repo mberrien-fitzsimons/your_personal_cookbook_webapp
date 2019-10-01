@@ -1,8 +1,9 @@
-import pandas as pd
-import numpy as np
-import pickle
 import collections
+import numpy as np
+import pandas as pd
+import pickle
 import random
+
 from collections import Counter
 
 infile = open('./crf_ingred_dict','rb')
