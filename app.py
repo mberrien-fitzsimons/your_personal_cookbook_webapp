@@ -16,7 +16,7 @@ bootstrap = Bootstrap(app)
 # load_dotenv(os.path.join(project_folder, '.env'))
 
 app.config['SECRET_KEY']='hard to guess string'
-app.config['ENV']='HEROKU_BUILDPACK_GIT_LFS_REPO'
+# app.config['ENV']='HEROKU_BUILDPACK_GIT_LFS_REPO'
 # HEROKU_BUILDPACK_GIT_LFS_REPO = os.getenv("HEROKU_BUILDPACK_GIT_LFS_REPO")
 
 import os
