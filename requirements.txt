@@ -24,4 +24,3 @@ collections-extended
 random2
 python-dotenv
 pickleshare==0.7.5
--r requirements/heroku.txt
