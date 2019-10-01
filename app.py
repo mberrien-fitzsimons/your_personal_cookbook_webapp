@@ -17,7 +17,10 @@ load_dotenv(os.path.join(project_folder, '.env'))
 
 app.config['SECRET_KEY']='hard to guess string'
 app.config['ENV']='HEROKU_BUILDPACK_GIT_LFS_REPO'
-HEROKU_BUILDPACK_GIT_LFS_REPO = os.getenv("HEROKU_BUILDPACK_GIT_LFS_REPO")
+# HEROKU_BUILDPACK_GIT_LFS_REPO = os.getenv("HEROKU_BUILDPACK_GIT_LFS_REPO")
+
+import os
+os.environ['HEROKU_BUILDPACK_GIT_LFS_REPO'] = 'HEROKU_BUILDPACK_GIT_LFS_REPO'
 
 class cartForm(FlaskForm):
     meal = StringField('What meal would you like to plan for?', validators=[DataRequired()])
