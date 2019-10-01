@@ -19,7 +19,5 @@ numpy==1.16.4
 pandas==0.25.1
 requests==2.22.0
 Werkzeug==0.16.0
-WTForms==2.2.1
-pickle
-collections
-random
+collections-extended
+random2

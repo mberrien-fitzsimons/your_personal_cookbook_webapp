@@ -22,6 +22,6 @@ Werkzeug==0.16.0
 WTForms==2.2.1
 collections-extended
 random2
--r requirements/heroku.txt
 python-dotenv
 pickleshare==0.7.5
+-r requirements/heroku.txt
