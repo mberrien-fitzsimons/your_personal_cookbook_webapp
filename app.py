@@ -12,15 +12,15 @@ from dotenv import load_dotenv
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
-project_folder = os.path.expanduser('~/coding_projects/python_projects/personal_projects/your_personal_cookbook_api/your_personal_cookbook_webapp')  # adjust as appropriate
-load_dotenv(os.path.join(project_folder, '.env'))
+# project_folder = os.path.expanduser('~/coding_projects/python_projects/personal_projects/your_personal_cookbook_api/your_personal_cookbook_webapp')  # adjust as appropriate
+# load_dotenv(os.path.join(project_folder, '.env'))
 
 app.config['SECRET_KEY']='hard to guess string'
 app.config['ENV']='HEROKU_BUILDPACK_GIT_LFS_REPO'
 # HEROKU_BUILDPACK_GIT_LFS_REPO = os.getenv("HEROKU_BUILDPACK_GIT_LFS_REPO")
 
 import os
-os.environ['HEROKU_BUILDPACK_GIT_LFS_REPO'] = 'HEROKU_BUILDPACK_GIT_LFS_REPO'
+os.environ['HEROKU_BUILDPACK_GIT_LFS_REPO'] = '6276a5ba51fefbc4210de916fc28e49a8b0d43a0'
 
 class cartForm(FlaskForm):
     meal = StringField('What meal would you like to plan for?', validators=[DataRequired()])
