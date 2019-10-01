@@ -6,13 +6,18 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, Form, BooleanField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from models import *
-
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
+
+project_folder = os.path.expanduser('~/coding_projects/python_projects/personal_projects/your_personal_cookbook_api/your_personal_cookbook_webapp')  # adjust as appropriate
+load_dotenv(os.path.join(project_folder, '.env'))
+
 app.config['SECRET_KEY']='hard to guess string'
 app.config['ENV']='HEROKU_BUILDPACK_GIT_LFS_REPO'
-
-bootstrap = Bootstrap(app)
+HEROKU_BUILDPACK_GIT_LFS_REPO = os.getenv("HEROKU_BUILDPACK_GIT_LFS_REPO")
 
 class cartForm(FlaskForm):
     meal = StringField('What meal would you like to plan for?', validators=[DataRequired()])
