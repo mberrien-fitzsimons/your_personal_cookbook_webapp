@@ -1,16 +1,11 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-{% block title %}Your personal Cookbook{% endblock %}
+{% block title %} Your personal Cookbook{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
-    <p>You'd like a meal for {{ meal }}</p>
-
-    <p>{% if dietary_restrictions %} You have {{ dietary_restrictions }} dietary restriction</p>
-      {% else %}
-      <p>You have no dietary restrictions. </p>
-      {% endif %}
+  <h3>Choose your meal and three items to put in your shopping basket</h3>
 </div>
 {{ wtf.quick_form(form) }}
 {% endblock %}

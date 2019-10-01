@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Recommendations{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+  <h3>Recommendations</h3>
+</div>
+
+<ol>
+  {% for recipe in recipes %}
+    <tr>
+      <li>{{ recipe | title }}</li>
+    </tr>
+  {% endfor %}
+</ol>
+
+<ol>
+  {% for link in links %}
+    <tr>
+      <li>{{ link }}</li>
+    </tr>
+  {% endfor %}
+</ol>
+{% endblock %}
