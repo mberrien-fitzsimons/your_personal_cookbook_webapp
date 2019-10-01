@@ -20,7 +20,7 @@ pandas==0.25.1
 requests==2.22.0
 Werkzeug==0.16.0
 WTForms==2.2.1
-collections
+collections-extended
 random
 -r requirements/heroku.txt
 python-dotenv
