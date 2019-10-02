@@ -22,15 +22,7 @@ infile = open('./crf_links_dict','rb')
 recipe_links_dict = pickle.load(infile)
 infile.close()
 
-# infile = open('./data_matrix','rb')
-# data_matrix = pickle.load(infile)
-# infile.close()
-
-# with open('data_matrix', 'rb') as f:
-#     data_matrix = pickle.load(f)
-
 data_matrix = pd.read_pickle("data_matrix")
-
 
 database_food_list = list(data_matrix.columns)
 
