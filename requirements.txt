@@ -23,4 +23,3 @@ WTForms==2.2.1
 collections-extended
 random2
 python-dotenv
-pickleshare==0.7.5
