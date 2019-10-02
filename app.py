@@ -59,3 +59,12 @@ def index():
                                recipes=random_recipes,
                                links=random_links)
     return render_template('index.html', form=form)
+
+# Start the server, continuously listen to requests.
+
+if __name__=="__main__":
+    # For local development:
+    app.run(debug=True)
+    # For public web serving:
+    #app.run(host='0.0.0.0')
+    app.run()
