@@ -15,7 +15,7 @@ httpie==1.0.3
 hyperlink==19.0.0
 idna==2.8
 Jinja2==2.10.1
-numpy==1.16.4
+numpy==1.22.0
 pandas==0.25.1
 requests==2.22.0
 Werkzeug==0.16.0
